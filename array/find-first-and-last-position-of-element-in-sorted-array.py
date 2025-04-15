@@ -1,7 +1,5 @@
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
-        a = -1
-        b = -1
         if target not in nums:
             return [-1,-1]
         left = 0
@@ -13,7 +11,7 @@ class Solution:
             else:
                 right = mid - 1
         a = mid
-        if nums[a + 1] != target:
+        if a == len(nums):
                 b = a + 1
         else:
             for b in range(a,len(nums)):
