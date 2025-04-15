@@ -14,9 +14,9 @@ class Solution:
                 right = mid - 1
         a = mid
         if nums[a + 1] != target:
-                b = a
+                b = a + 1
         else:
             for b in range(a,len(nums)):
                 if nums[b] == target:
                     b += 1
-        return [a,b]
+        return [a,b - 1]
