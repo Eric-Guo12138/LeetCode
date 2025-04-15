@@ -13,11 +13,11 @@ class Solution:
         a = mid
         left = 0
         right = len(nums) - 1
-        while left + 1 < right:
-            mid = (left + right) // 2
+        while left < right:
+            mid = (left + right + 1) // 2
             if nums[mid] <= target:
                 left = mid
             else:
-                right = mid 
-        b = mid
+                right = mid - 1
+        b = right
         return [a,b]
