@@ -9,8 +9,8 @@ class Solution:
             if nums[mid] < target:
                 left = mid + 1
             else:
-                right = mid - 1
-        a = mid
+                right = mid 
+        a = left
         left = 0
         right = len(nums) - 1
         while left < right:
