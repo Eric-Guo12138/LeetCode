@@ -11,7 +11,13 @@ class Solution:
             else:
                 right = mid - 1
         a = mid
-        for b in range(a,len(nums)):
-            if nums[b] == target:
-                return b
+        left = 0
+        right = len(nums) - 1
+        while left + 1 < right:
+            mid = (left + right) // 2
+            if nums[mid] <= target:
+                left = mid
+            else:
+                right = mid 
+        b = mid
         return [a,b]
