@@ -11,8 +11,7 @@ class Solution:
             else:
                 right = mid - 1
         a = mid
-        while a < len(nums) - 1:
-            for b in range(a,len(nums)):
-                if nums[b] == target:
-                    b += 1
+        for b in range(a,len(nums)):
+            if nums[b] == target:
+                return b
         return [a,b]
