@@ -11,6 +11,6 @@ class Solution:
                 right = mid - 1
             else:
                  left = mid + 1
-        if nums[mid] != target:
+        if nums[mid] < target:
             mid += 1
         return mid
