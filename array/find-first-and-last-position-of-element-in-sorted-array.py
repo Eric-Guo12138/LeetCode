@@ -13,8 +13,10 @@ class Solution:
             else:
                 right = mid - 1
         a = mid
-        a += 1
-        for b in range(a,len(nums)):
-            if nums[b] == target:
-                b += 1
+        if target not in nums[a,len(nums)]:
+                b = a
+        else:
+            for b in range(a,len(nums)):
+                if nums[b] == target:
+                    b += 1
         return [a,b]
