@@ -13,7 +13,7 @@ class Solution:
             else:
                 right = mid - 1
         a = mid
-        if target not in nums[a,len(nums)]:
+        if nums[a + 1] != target:
                 b = a
         else:
             for b in range(a,len(nums)):
