@@ -7,7 +7,7 @@
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
         # 递归，计算整棵树的最大深度可以先计算子树的，再+1
-        if root == 0:
+        if root is None:
             return 0
         l_depth = self.maxDepth(root.left)
         r_depth = self.maxDepth(root.right)
