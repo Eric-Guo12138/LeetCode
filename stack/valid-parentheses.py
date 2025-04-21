@@ -28,5 +28,5 @@ class Solution:
                     return True
                 else:
                     return False
-            else:
-                return False
+        if len(st) != 0:
+            return False
