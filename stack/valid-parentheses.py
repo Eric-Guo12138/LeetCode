@@ -18,13 +18,13 @@ class Solution:
                     return True
                 else:
                     return False
-            elif len(st) != 0 and s[i] == ']':
-                if st.pop() == '[':
+            elif s[i] == ']':
+                if len(st) != 0 and st.pop() == '[':
                     return True
                 else:
                     return False
-            elif len(st) != 0 and s[i] == '}':
-                if st.pop() == '{':
+            elif s[i] == '}':
+                if len(st) != 0 and st.pop() == '{':
                     return True
                 else:
                     return False
