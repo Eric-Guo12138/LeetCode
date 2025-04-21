@@ -14,22 +14,17 @@ class Solution:
                 st.append(s[i])
             # 右括号，弹出栈顶元素看是否匹配
             elif s[i] == ')':
-                if len(st) != 0 and st.pop() == '(':
-                    return True
-                else:
+                if len(st)==0 or st.pop()!='(':
                     return False
-                    break
             elif s[i] == ']':
-                if len(st) != 0 and st.pop() == '[':
-                    return True
-                else:
+                if len(st)==0 or st.pop()!='[':
                     return False
-                    break
             elif s[i] == '}':
-                if len(st) != 0 and st.pop() == '{':
-                    return True
-                else:
+                if len(st)==0 or st.pop()!='{':
                     return False
-                    break
+            else:
+                st.pop()
         if len(st) != 0:
             return False
+        else:
+            return True
