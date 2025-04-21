@@ -14,16 +14,16 @@ class Solution:
                 st.append(s[i])
             # 右括号，弹出栈顶元素看是否匹配
             elif s[i] == ')':
-                if st.pop() == '(':
+                if len(st) != 0 and st.pop() == '(':
                     return True
                 else:
                     return False
-            elif s[i] == ']':
+            elif len(st) != 0 and s[i] == ']':
                 if st.pop() == '[':
                     return True
                 else:
                     return False
-            elif s[i] == '}':
+            elif len(st) != 0 and s[i] == '}':
                 if st.pop() == '{':
                     return True
                 else:
