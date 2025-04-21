@@ -18,15 +18,18 @@ class Solution:
                     return True
                 else:
                     return False
+                    break
             elif s[i] == ']':
                 if len(st) != 0 and st.pop() == '[':
                     return True
                 else:
                     return False
+                    break
             elif s[i] == '}':
                 if len(st) != 0 and st.pop() == '{':
                     return True
                 else:
                     return False
+                    break
         if len(st) != 0:
             return False
