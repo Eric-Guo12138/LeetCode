@@ -7,7 +7,9 @@ class Solution:
         while m >= 0:
             if not s[m].isalnum():
                 s = s.replace(s[m],'')
-            m -= 1
+                m -= 1
+            else:
+                m -= 1
         i,j = 0,len(s)-1
         while i < j:
             if s[i] == s[j]:
