@@ -4,9 +4,9 @@ class Solution:
         # 遍历数组，遇到值为0的把cnt重置为0，非0的cnt+1，返回和ans中更大的值
         ans = cnt = 0
         for num in nums:
-            if x:
+            if num:
                 cnt += 1
-                ans = max(ans,max)
+                ans = max(ans,cnt)
             else:
                 cnt = 0
         return ans
